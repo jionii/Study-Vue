@@ -7,7 +7,9 @@
   </head>
   <body>
     <div id="app">
-      <h1>📌 게시판 목록</h1>
+      <h1>📌 게시판 목록 </h1>
+
+      <button class="writeBtn">글쓰기</button>  
 
     <!-- 여기에 게시글 목록을 표시하는 코드를 작성하세요 -->
       <ul>
@@ -18,6 +20,7 @@
 
       <!-- 선택한 게시글의 내용을 표시하는 부분을 작성하세요 -->
       <div v-if="selectedPost" class="post-content">
+        {{selectedPost.title}}
         {{selectedPost.content}}
         <br>
         <button @click="closePost">닫기</button>
@@ -151,6 +154,19 @@
         border-radius: 3px;
       }
       button:hover {
+        background: #ff4f4f;
+      }
+
+      .writeBtn {
+        margin-top: 10px;
+        padding: 5px 10px;
+        border: none;
+        background: #ff6b6b;
+        color: white;
+        cursor: pointer;
+        border-radius: 3px;
+      }
+      .writeBtn:hover {
         background: #ff4f4f;
       }
     </style>
